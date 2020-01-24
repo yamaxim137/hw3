@@ -1,24 +1,16 @@
+// 4.    Класс “Охранная сигнализация”  вкл/выкл, если пароль от дома 
+// введен 3 раза неверно то включить.
+
 function Signaling(model, qurentPass) {
 	Device.call(this, model); // model - что мы сразу с model работали
 	this._qurentPass = qurentPass;
-
-	this.plusTemperature = function(){
-		if((this._qurentTemperature < 25) && (this._state == true)){
-			this._qurentTemperature += 2;
-		}
-	};
-
-	this.minusTemperature = function(){
-		if((this._qurentTemperature > -5) && (this._state == true)){
-			this._qurentTemperature -= 2;
-		}
-	};
-
-	this.getQurentTemperature = function(){
-        return this._qurentTemperature;
         
-    this.setQurentPass = function(){
-        confirm
-        return this._qurentTemperature;        
+	this.controlPass = function(){
+		for (let i = 0; i < 3; i++) {
+			pass = prompt('введите пароль:');
+			if (pass == this._qurentPass) {break;}
+			if (i = 3){ this.on(); }	
+		}
+		if (this.state) alert('пароль верный');
 	};
 }
