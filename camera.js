@@ -3,35 +3,23 @@ function Camera(model, qurentType, qurentMode) {
     this._qurentType = qurentType;
     this._qurentMode = qurentMode;
 
-	this.plusType = function(){
+	this.setType = function(){
 		if((this._qurentType < 25) && (this._state == true)){
 			this._qurentType += 2;
 		}
 	};
 
-	this.minusType = function(){
-		if((this._qurentType > -5) && (this._state == true)){
-			this._qurentType -= 2;
-		}
-	};
-
 	this.getqurentType = function(){
 		return this._qurentType;
-    };
+    	};
     
-    this.plusMode = function(){
+    	this.setMode = function(){
 		if((this._qurentType < 25) && (this._state == true)){
 			this._qurentType += 2;
 		}
 	};
 
-	this.minusMode = function(){
-		if((this._qurentType > -5) && (this._state == true)){
-			this._qurentType -= 2;
-		}
-	};
-
-	this.getqurentType = function(){
-		return this._qurentType;
+	this.getqurentMode = function(){
+		return this._qurentMode;
 	};
 }
