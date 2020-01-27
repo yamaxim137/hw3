@@ -53,7 +53,7 @@ ViewTimer.prototype.render = function() {    //создаёт все элеме�
 	plusTime.className = "inc-time";
 	plusTime.innerHTML = "увеличить время";
 	plusTime.addEventListener('click', () => {   
-		this._timer.goTimer();
+		this._timer.goTimer(this._timer._qurentTime);
 		time.innerHTML = "Прошло времени: " + this._timer._qurentTime;
 	});
 
