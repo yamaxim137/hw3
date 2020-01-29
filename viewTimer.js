@@ -41,11 +41,11 @@ ViewTimer.prototype.render = function() {    //создаёт все элеме�
 
 	var offBtn = document.createElement("Button");
         offBtn.type = "button";
-		offBtn.className = "off";
-		offBtn.innerHTML = "Стоп";
-		offBtn.addEventListener('click', () => {   
-			this._timer.off();
-			this.stateChange();
+	offBtn.className = "off";
+	offBtn.innerHTML = "Стоп";
+	offBtn.addEventListener('click', () => {   
+		this._timer.off();
+		this.stateChange();
 	});
 
 	var plusTime = document.createElement("Button");
@@ -55,6 +55,15 @@ ViewTimer.prototype.render = function() {    //создаёт все элеме�
 	plusTime.addEventListener('click', () => {   
 		this._timer.goTimer(this._timer._qurentTime);
 		time.innerHTML = "Прошло времени: " + this._timer._qurentTime;
+	});
+	
+	var delBtn = document.createElement("Button");
+  delBtn.type = "button";
+	delBtn.className = "del";
+	offBtn.innerHTML = "Убрать";
+	offBtn.addEventListener('click', () => {   
+// 			this._timer.del();
+		alert("Скоро уберём Секундомер (ещё не умеем) )");
 	});
 
 	this.stateChange(); // постоянная проверка состояния
@@ -66,6 +75,7 @@ ViewTimer.prototype.render = function() {    //создаёт все элеме�
 	mlsecund.appendChild(onBtn);
 	mlsecund.appendChild(offBtn);
 	mlsecund.appendChild(plusTime);
+	mlsecund.appendChild(delBtn);
 	
 	this._rootDom.appendChild(mlsecund); // обернули
 };
