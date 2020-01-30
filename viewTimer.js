@@ -58,10 +58,10 @@ ViewTimer.prototype.render = function() {    //создаёт все элеме�
 	});
 	
 	var delBtn = document.createElement("Button");
-  delBtn.type = "button";
+        delBtn.type = "button";
 	delBtn.className = "del";
-	offBtn.innerHTML = "Убрать";
-	offBtn.addEventListener('click', () => {   
+	delBtn.innerHTML = "Убрать";
+	delBtn.addEventListener('click', () => {   
 // 			this._timer.del();
 		alert("Скоро уберём Секундомер (ещё не умеем) )");
 	});
